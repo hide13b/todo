@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シンプル To-Do アプリ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 To-Do リスト</h1>
+        </header>
+
+        <main>
+            <!-- タスク追加フォーム -->
+            <form id="todo-form" class="todo-form">
+                <input
+                    type="text"
+                    id="todo-input"
+                    class="todo-input"
+                    placeholder="新しいタスクを入力..."
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" class="btn-add">追加</button>
+            </form>
+
+            <!-- タスク一覧 -->
+            <div class="todo-list-container">
+                <ul id="todo-list" class="todo-list">
+                    <!-- タスクがここに動的に追加されます -->
+                </ul>
+
+                <!-- 空の状態メッセージ -->
+                <div id="empty-state" class="empty-state">
+                    <p>まだタスクがありません</p>
+                    <p class="empty-state-hint">上のフォームからタスクを追加してください</p>
+                </div>
+            </div>
+
+            <!-- 統計情報 -->
+            <div class="stats">
+                <span class="stats-item">
+                    全体: <strong id="total-count">0</strong>
+                </span>
+                <span class="stats-item">
+                    未完了: <strong id="active-count">0</strong>
+                </span>
+                <span class="stats-item">
+                    完了: <strong id="completed-count">0</strong>
+                </span>
+            </div>
+        </main>
+
+        <footer>
+            <p>Vanilla JavaScript で作成された シンプル To-Do アプリ</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
